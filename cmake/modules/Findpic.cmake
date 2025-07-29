@@ -1,6 +1,6 @@
 set(_lib "pic")
 set(_pkg "pic")
-set(_url "git@github.com:JorgeG94/pic.git")
+set(_url "https://github.com/JorgeG94/pic")
 # not used atm
 set(_rev "v0.5.0")
 
