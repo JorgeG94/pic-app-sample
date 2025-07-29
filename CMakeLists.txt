@@ -30,7 +30,13 @@ if(NOT TARGET test-drive::test-drive AND ENABLE_TESTING)
   find_package("test-drive" REQUIRED)
 endif()
 
+if(NOT TARGET pic::pic)
+find_package("pic" REQUIRED)
+endif()
+
 add_library(${main_lib} STATIC)
+
+target_link_libraries(${main_lib} PRIVATE pic::pic)
 
 # Enable position-independent code for shared-library linking support
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
